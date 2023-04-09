@@ -1,0 +1,39 @@
+//GET players Array (API-1)
+const getPlayersQuery = 
+`SELECT
+ *
+   FROM 
+      cricket_team
+   ORDER BY
+      player_id;`;
+
+// POST player (API-2)
+const postPlayerQuery = 
+`INSERT INTO
+    cricket_team (playerName, jerseyNumber, role)
+   VALUES
+   (
+       `${playerName}
+        ${jerseyNumber}
+        ${role}
+   );`;
+
+// GET player (API-3)
+const getPlayerQuery = 
+`SELECT
+ *
+FROM 
+    cricket_team
+WHERE
+    player_id = ${playerId};`;
+
+// PUT player Details (API-4)
+const updatePlayerDetails = 
+`UPDATE
+    cricket_team 
+ SET
+    player_name = '${playerName}', 
+    jersey_number = ${jerseyNumber}, 
+    role = '${role}'
+ WHERE 
+    player_id = ${playerId};`;
